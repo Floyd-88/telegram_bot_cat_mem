@@ -28,6 +28,10 @@ bot.start((ctx) => {
   }
 });
 
+bot.command('help', (ctx) => {
+    ctx.replyWithHTML(`Доступные команды:\n\n<b>'/start'</b> - запустить бота,\n\n<b>'меню'</b> - открыть меню,\n\n<b>'Показать котиков'</b> - получить мем с котиками,\n\n<b>'Закрыть меню'</b> - для закрытия меню`)
+})
+
 bot.hears(['меню', 'Меню'], async ctx => {
     openMenu(bot, ctx.chat.id)
 })
